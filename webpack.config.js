@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/presentation/assets/js/index.ts',
+  entry: path.resolve(__dirname, './src/presentation/assets/js/index.ts'),
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -13,6 +13,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@*': path.resolve(__dirname, 'src/*'),
+    },
   },
   module: {
     rules: [
