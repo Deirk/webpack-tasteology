@@ -1,10 +1,10 @@
 export interface CmsHomeDataModel {
-  firstSection: {};
-  secondSection: {};
+  firstSection: FirstSection;
+  secondSection: SecondSection;
 }
 
 export interface FirstSection {
-  images: Array<Image>;
+  images: Array<ImageData>;
   content: {
     headline: string;
     body: string;
@@ -21,12 +21,12 @@ export interface SecondSection {
 }
 
 export interface Card {
-  image: Image;
+  image: ImageData;
   title: string;
   body: string;
 }
 
-export interface Image {
-  imageURL: string;
+export interface ImageData {
+  imageUrl: string;
   imageAlt: string;
 }

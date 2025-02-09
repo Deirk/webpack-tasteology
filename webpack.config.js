@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/presentation/assets/js/index.ts'),
@@ -10,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
+    assetModuleFilename: 'assets/images/[name][ext]',
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -25,15 +28,12 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/images/[name][ext]',
-        },
       },
     ],
   },
@@ -45,6 +45,20 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.css',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'src/presentation/assets/images', to: 'assets/images' }],
+    }),
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminMinify,
+        options: {
+          plugins: [
+            ['imagemin-mozjpeg', { quality: 75 }],
+            ['imagemin-pngquant', { quality: [0.6, 0.8] }],
+          ],
+        },
+      },
     }),
   ],
   devServer: {
