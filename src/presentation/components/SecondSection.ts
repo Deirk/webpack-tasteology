@@ -1,4 +1,5 @@
 import { SecondSection } from '@/core/models/cms-home-data.model';
+import { createModal } from './Modal';
 
 export const renderSecondSection = ( { headline, cards }: SecondSection ): HTMLElement => {
 
@@ -21,6 +22,12 @@ export const renderSecondSection = ( { headline, cards }: SecondSection ): HTMLE
     const cardImageElement = document.createElement( 'img' );
     cardImageElement.src = card.image.imageUrl;
     cardImageElement.alt = card.image.imageAlt;
+    cardImageElement.setAttribute( 'aria-label', 'Card image, open a modal with the full size image' );
+
+    cardImageElement.addEventListener('click', () => {
+      const modal = createModal(card.image.imageUrl, card.image.imageAlt);
+      document.body.appendChild(modal);
+    });
 
     const cardTitleElement = document.createElement( 'h3' );
     cardTitleElement.className = 'card-title';

@@ -2,6 +2,7 @@ import { renderFirstSection } from '@/presentation/components/FirstSection';
 import '../css/main.css';
 import '../css/section-1.css';
 import '../css/section-2.css';
+import '../css/modal.css';
 
 import { CmsService } from '@/infrastructure/services/CmsService';
 import { removeLoader, renderLoader } from '@/presentation/components/Loader';

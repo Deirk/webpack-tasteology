@@ -1,4 +1,5 @@
 import { FirstSection, HeroImage } from '@/core/models/cms-home-data.model';
+import { createModal } from './Modal';
 
 export const renderFirstSection = ( { heroImages, content }: FirstSection ): HTMLElement => {
   const firstSectionElement = document.createElement( 'section' );
@@ -20,8 +21,13 @@ export const renderFirstSection = ( { heroImages, content }: FirstSection ): HTM
     const imageElement = document.createElement( 'img' );
     imageElement.src = image.imageUrl;
     imageElement.alt = image.imageAlt;
-    imageElement.setAttribute( 'aria-label', `${ index > 0 ? 'Small' : 'Large' } Image from image grid` );
+    imageElement.setAttribute( 'aria-label', `${ index > 0 ? 'Small' : 'Large' } Image from image grid open a modal with the full size image` );
     const elementToAppend = index > 0 ? smallImageContainerElement : largeImageContainerElement;
+
+    imageElement.addEventListener('click', () => {
+      const modal = createModal(image.imageUrl, image.imageAlt);
+      document.body.appendChild(modal);
+    });
 
     imageAnchorElement.append( imageElement );
     elementToAppend.append( imageAnchorElement );

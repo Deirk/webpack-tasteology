@@ -1,0 +1,18 @@
+@reference "./main.css";
+
+.modal {
+  @apply fixed inset-0 bg-black/75 flex items-center justify-center z-50 p-4 backdrop-blur-sm;
+
+  .modal-content {
+    @apply transform flex flex-col justify-center items-center gap-6 overflow-hidden rounded-[1rem] text-left shadow-xl transition-all bg-white p-5 h-[80%] w-fit duration-300;
+  
+    img {
+      @apply w-auto h-[95%] rounded-[1rem]
+    }
+    
+    button {
+      @apply inline-flex w-full justify-center rounded-[1rem] bg-[#CF1430] px-3 py-2 text-sm font-semibold  transition-colors text-white shadow-xs hover:bg-red-500;
+    }
+  }
+
+}
