@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .app {
-  @apply flex flex-col py-[7.5rem] px-[9rem]  items-start gap-[1.875rem] self-stretch bg-[#0E1414] w-full min-h-full font-[Open_Sans] font-light text-white
+  @apply flex flex-col py-20 px-10 sm:py-[7.5rem] sm:px-[9rem]  items-start gap-[1.875rem] self-stretch bg-[#0E1414] w-full min-h-full font-[Open_Sans] font-light text-white
 }
 
 .headline {

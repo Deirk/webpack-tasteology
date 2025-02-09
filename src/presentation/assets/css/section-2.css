@@ -1,16 +1,16 @@
 @reference "./main.css";
 
 .section2 {
-  @apply flex flex-col items-center gap-[1.875rem];
+  @apply flex flex-col items-center xl:gap-[1.875rem] gap-[2rem] sm:mt-5;
 
   .card-container {
-    @apply grid grid-cols-3 gap-4;
+    @apply grid grid-cols-1 sm:grid-cols-3 xl:gap-4 gap-5;
 
     .card-item {
       @apply flex flex-col items-center gap-8;
 
       img{
-        @apply w-full object-cover h-[300px];
+        @apply w-full object-cover sm:min-h-[300px];
       }
 
       .card-title{

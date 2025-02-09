@@ -1,30 +1,30 @@
 @reference "./main.css";
 
 .section1 {
-  @apply grid grid-cols-12 gap-[1.875rem];
+  @apply grid grid-cols-1 xl:grid-cols-12 gap-y-10  xl:gap-[1.875rem];
 
   .image-grid {
-    @apply grid grid-cols-12 col-span-8 gap-2.5;
+    @apply grid grid-cols-12 col-span-1  xl:col-span-8  gap-2.5 2xl:gap-4;
 
     .large-image-container {
       @apply col-span-6;
 
       img {
-          @apply h-[600px] w-full object-cover;
+          @apply h-auto sm:min-h-[600px] w-full object-cover;
       }
     }
 
     .small-image-container {
-      @apply col-span-6 flex flex-col gap-2.5;
+      @apply col-span-6 flex flex-col gap-2.5 2xl:gap-4;
 
       img {
-        @apply h-[295px] w-full object-cover;
+        @apply w-full sm:min-h-[295px] object-cover h-1/2;
       }
     }
   }
 
   .content-conatiner {
-    @apply col-span-4 flex flex-col content-center items-center gap-[1.875rem] self-stretch;
+    @apply col-span-4 flex flex-col content-center items-center gap-3 sm:gap-[1.875rem] self-stretch;
 
     .callout-head {
       @apply text-[0.9rem] font-bold leading-[1.3rem] text-[#CF1430] uppercase w-full;
