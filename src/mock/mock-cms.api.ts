@@ -32,7 +32,7 @@ const fakeCmsData: CmsHomeDataModel = {
     cards: [
       {
         image: {
-          imageUrl: './assets/images/card-image-1.jpg',
+          imageUrl: './assets/images/section-2/card-image-1.png',
           imageAlt: 'An image with red jelly on a spoon.',
         },
         title: 'RED',
@@ -40,7 +40,7 @@ const fakeCmsData: CmsHomeDataModel = {
       },
       {
         image: {
-          imageUrl: './assets/images/card-image-2.jpg',
+          imageUrl: './assets/images/section-2/card-image-2.png',
           imageAlt: 'An image with green jelly on a spoon.',
         },
         title: 'Green',
@@ -48,7 +48,7 @@ const fakeCmsData: CmsHomeDataModel = {
       },
       {
         image: {
-          imageUrl: './assets/images/card-image-3.jpg',
+          imageUrl: './assets/images/section-2/card-image-3.png',
           imageAlt: 'An image with white jelly on a spoon.',
         },
         title: 'White',
