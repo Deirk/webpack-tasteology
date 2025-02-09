@@ -17,7 +17,29 @@
   <div
     class="flex flex-col py-[7.5rem] px-[9rem]  items-start gap-[1.875rem] self-stretch bg-[#0E1414] w-full min-h-full font-[Open_Sans] font-light text-white"
     id="app">
-    <section class="grid grid-cols-12 gap-[1.875rem]">
+    <!-- Loader -->
+    <div class="mx-auto w-full max-w-sm rounded-md border border-blue-300 p-4">
+      <p class="text-[1.3rem] font-bold leading-[1.875rem] text-center">Loading...</p>
+      <div class="flex animate-pulse space-x-4">
+        <div class="flex-1 space-y-6 py-1">
+          <div class="h-2 rounded bg-gray-200"></div>
+          <div class="space-y-3">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
+              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
+            </div>
+            <div class="h-2 rounded bg-gray-200"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <section class="grid grid-cols-12 gap-[1.875rem]">
       <div class="grid grid-cols-12 col-span-8 gap-2.5">
         <div class="col-span-6">
           <img src="./assets/images/section-1/Left.jpg" alt="Long showcase image" class="h-[600px] w-full object-cover">
@@ -64,7 +86,7 @@
         </div>
       </div>
   </div>
-  </section>
+  </section> -->
 </body>
 
 </html>
