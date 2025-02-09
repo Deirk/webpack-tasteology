@@ -1,0 +1,38 @@
+@reference "./main.css";
+
+.section1 {
+  @apply grid grid-cols-12 gap-[1.875rem];
+
+  .image-grid {
+    @apply grid grid-cols-12 col-span-8 gap-2.5;
+
+    .large-image-container {
+      @apply col-span-6;
+
+      img {
+          @apply h-[600px] w-full object-cover;
+      }
+    }
+
+    .small-image-container {
+      @apply col-span-6 flex flex-col gap-2.5;
+
+      img {
+        @apply h-[295px] w-full object-cover;
+      }
+    }
+  }
+
+  .content-conatiner {
+    @apply col-span-4 flex flex-col content-center items-center gap-[1.875rem] self-stretch;
+
+    .callout-head {
+      @apply text-[0.9rem] font-bold leading-[1.3rem] text-[#CF1430] uppercase w-full;
+    }
+
+    .callout-content {
+      @apply text-[1.3rem] font-bold leading-[1.875rem] w-full;
+    }
+
+  }
+}

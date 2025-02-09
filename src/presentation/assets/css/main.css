@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.app {
+  @apply flex flex-col py-[7.5rem] px-[9rem]  items-start gap-[1.875rem] self-stretch bg-[#0E1414] w-full min-h-full font-[Open_Sans] font-light text-white
+}
+
+.headline {
+  @apply text-3xl tracking-widest uppercase leading-8 pb-[1.875rem] border-b-1;
+}
+
+.content {
+  @apply text-[1.3rem] leading-[1.875rem] mt-4 w-full;
+}

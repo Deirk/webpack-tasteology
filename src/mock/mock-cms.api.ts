@@ -60,6 +60,6 @@ const fakeCmsData: CmsHomeDataModel = {
 
 // Fake CMS Service
 export const fetchCmsData = async (): Promise<CmsHomeDataModel> => {
-  await sleep( 1000 );
+  await sleep( 10000 );
   return fakeCmsData;
 };

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/styles.css" rel="stylesheet">
   <base href="/">
   <title>Tasteology</title>
   <meta name="description" content="Tasteology - A culinary experience">
@@ -10,83 +11,60 @@
   <meta name="author" content="Jose Devera">
   <meta property="og:title" content="Tasteology">
   <meta property="og:description" content="Tasteology - A culinary experience">
-  <meta property="og:image" content="./assets/images/og-image.jpg">
 </head>
 
 <body>
-  <div
-    class="flex flex-col py-[7.5rem] px-[9rem]  items-start gap-[1.875rem] self-stretch bg-[#0E1414] w-full min-h-full font-[Open_Sans] font-light text-white"
-    id="app">
-    <!-- Loader -->
-    <div class="mx-auto w-full max-w-sm rounded-md border border-blue-300 p-4">
-      <p class="text-[1.3rem] font-bold leading-[1.875rem] text-center">Loading...</p>
-      <div class="flex animate-pulse space-x-4">
-        <div class="flex-1 space-y-6 py-1">
-          <div class="h-2 rounded bg-gray-200"></div>
-          <div class="space-y-3">
-            <div class="grid grid-cols-3 gap-4">
-              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-2 h-2 rounded bg-gray-200"></div>
-              <div class="col-span-1 h-2 rounded bg-gray-200"></div>
-            </div>
-            <div class="h-2 rounded bg-gray-200"></div>
-          </div>
+  <div class="app" id="app">
+    <!-- Content -->
+    <section class="section1">
+      <div class="image-grid">
+        <div class="large-image-container">
+          <img src="./assets/images/section-1/Left.jpg" alt="Long showcase image" class="">
+        </div>
+        <div class="small-image-container">
+          <img src="./assets/images/section-1/Right_Top.jpg" alt="Small showcase image">
+          <img src="./assets/images/section-1/Right_Bottom.jpg" alt="Small showcase image">
         </div>
       </div>
-    </div>
-    <!-- <section class="grid grid-cols-12 gap-[1.875rem]">
-      <div class="grid grid-cols-12 col-span-8 gap-2.5">
-        <div class="col-span-6">
-          <img src="./assets/images/section-1/Left.jpg" alt="Long showcase image" class="h-[600px] w-full object-cover">
-        </div>
-        <div class="col-span-6 flex flex-col gap-2.5">
-          <img src="./assets/images/section-1/Right_Top.jpg" alt="Small showcase image"
-            class="h-[295px] w-full object-cover">
-          <img src="./assets/images/section-1/Right_Bottom.jpg" alt="Small showcase image"
-            class="h-[295px] w-full object-cover">
-        </div>
-      </div>
-      <div class="col-span-4 flex flex-col content-center items-center gap-[1.875rem] self-stretch">
-        <h2 class="text-3xl tracking-widest uppercase leading-8 pb-[1.875rem] border-b-1 w-full">WHAT DOES COOKING MEAN?
+      <div class="content-conatiner">
+        <h2 class="headline">WHAT DOES COOKING MEAN?
         </h2>
-        <p class="text-[1.3rem] leading-[1.875rem] mt-4 w-full">Is it simply applying heat to a food product? A way of
+        <p class="content">Is it simply applying heat to a food product? A way of
           making
           certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what
           Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find
           out what his experiments have told him. And in the process even discovered the secret to cooking the perfect
           egg...</p>
-        <h3 class="text-[0.9rem] font-bold leading-[1.3rem] text-[#CF1430] uppercase w-full">THE PERFECT EGG</h3>
-        <p class="text-[1.3rem] font-bold leading-[1.875rem] w-full">Keep water between 67 and 68°C for a flavourful,
+        <h3 class="callout-head">THE PERFECT EGG</h3>
+        <p class="callout-content">Keep water between 67 and 68°C for a flavourful,
           tender yolk</p>
       </div>
     </section>
-    <section class="flex flex-col items-center gap-[1.875rem]">
-      <h2 class="text-3xl tracking-widest uppercase leading-8 pb-[1.875rem] border-b-1">Taste the Colours</h2>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="flex flex-col items-center gap-8" role="button">
-          <img src="./assets/images/card1.jpg" class="w-full object-cover h-[300px]" alt="Card image 1">
-          <h3 class="text-[1.3rem] font-bold leading-[1.875rem] ">RED</h3>
-          <p class="text-[1.3rem] leading-[1.875rem]">Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.</p>
+    <section class="section2">
+      <h2 class="headline">Taste the Colours</h2>
+      <div class="card-container">
+        <div class="card-item" role="button">
+          <img src="./assets/images/card1.jpg" alt="Card image 1">
+          <h3 class="card-title">RED</h3>
+          <p class="card-content">Red foods remind us of berries and soft fruits, so we anticipate a
+            sweet taste.</p>
         </div>
-        <div class="flex flex-col items-center gap-8" role="button">
-          <img src="./assets/images/card2.jpg" class="w-full object-cover h-[300px]" alt="Card image 2">
-          <h3 class="text-[1.3rem] font-bold leading-[1.875rem] ">Green</h3>
-          <p class="text-[1.3rem] leading-[1.875rem]">Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours</p>
+        <div class="card-item" role="button">
+          <img src="./assets/images/card2.jpg" alt="Card image 2">
+          <h3 class="card-title">Green</h3>
+          <p class="card-content">Fresh, zingy green colours are reminiscent of unripe fruit,
+            promising sour or acid flavours</p>
         </div>
-        <div class="flex flex-col items-center gap-8" role="button">
-          <img src="./assets/images/card3.jpg" class="w-full object-cover h-[300px]" alt="Card image 3">
-          <h3 class="text-[1.3rem] font-bold leading-[1.875rem] ">White</h3>
-          <p class="text-[1.3rem] leading-[1.875rem]">White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat. 
+        <div class="card-item" role="button">
+          <img src="./assets/images/card3.jpg" alt="Card image 3">
+          <h3 class="card-title">White</h3>
+          <p class="card-content">White foods evoke memories of salt and salty flavours, driving the
+            expectation of a savoury treat. 
           </p>
         </div>
       </div>
   </div>
-  </section> -->
+  </section>
 </body>
 
 </html>
