@@ -1,9 +1,9 @@
 module.exports = {
   content: [
-    "./src/presentation/**/*.{html,ts}", // Scan HTML and TypeScript files
+    './src/presentation/**/*.{html,ts}',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};

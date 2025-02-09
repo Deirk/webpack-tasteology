@@ -1,62 +1,55 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/presentation/assets/js/index.ts', // Entry point for TypeScript
+  entry: './src/presentation/assets/js/index.ts',
+  mode: 'development',
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    filename: 'bundle.js',
+    publicPath: '/',
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.ts$/, // Handle TypeScript files
+        test: /\.ts$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/, // Handle CSS files
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  require('@tailwindcss/postcss'), // Tailwind CSS
-                  require('autoprefixer'), // Autoprefixer
-                ],
-              },
-            },
-          },
-        ],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // Handle image files
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]',
+          filename: 'assets/images/[name][ext]',
         },
       },
     ],
   },
-  resolve: {
-    extensions: ['.ts', '.js'], // Resolve TypeScript and JavaScript files
-  },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/presentation/pages/index.html', // HTML template
-      filename: 'index.html', // Output HTML file
+      template: './src/presentation/pages/index.html',
+      filename: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
     }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'), // Serve files from the dist folder
+      directory: path.join(__dirname, 'dist'),
     },
     compress: true,
     port: 9000,
+    hot: true,
   },
-  mode: 'development',
 };

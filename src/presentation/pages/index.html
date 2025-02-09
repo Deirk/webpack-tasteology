@@ -4,16 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
-  <link rel="stylesheet" href="assets/css/tailwind.css">
   <title>Tasteology</title>
-
+  <meta name="description" content="Tasteology - A culinary experience">
+  <meta name="keywords" content="food, recipes, cooking">
+  <meta name="author" content="Jose Devera">
+  <meta property="og:title" content="Tasteology">
+  <meta property="og:description" content="Tasteology - A culinary experience">
+  <meta property="og:image" content="./assets/images/og-image.jpg">
 </head>
 
 <body>
-  <h1 class="text-3xl font-bold underline text-red-500">
-    Hello world
-    <span>Tasteology</span>
-  </h1>
+  <div class="bg-[#0E1414] w-full h-full px-36" id="app">
+    <section class="grid grid-cols-12 gap-4 p-8">
+      <div class="grid grid-cols-12 col-span-8">
+        <div class="col-span-6">
+          <img src="./assets/images/section-1/Left.jpg" alt="Long showcase image" class="h-[600px] w-full object-cover">
+        </div>
+        <div class="col-span-6 flex flex-col">
+          <img src="./assets/images/section-1/Right_Top.jpg" alt="Small showcase image"
+            class="h-[300px] w-full object-cover">
+          <img src="./assets/images/section-1/Right_Bottom.jpg" alt="Small showcase image"
+            class="h-[300px] w-full object-cover">
+        </div>
+      </div>
+      <div class="col-span-4 flex flex-col justify-center">
+        <h1 class="text-4xl font-bold">Discover Tasteology</h1>
+        <p class="text-lg mt-4">Experience the finest culinary selections with Tasteology.</p>
+        <button class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Learn More</button>
+      </div>
+    </section>
+    <section class="p-8 grid grid-cols-3 gap-4">
+      <div class="flex flex-col items-center gap-8" role="button">
+        <img src="./assets/images/card1.jpg" class="w-full object-cover h-[300px]" alt="Card image 1">
+        <h2 class="text-xl font-bold mt-2">RED</h2>
+        <p>Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.</p>
+      </div>
+      <div class="flex flex-col items-center gap-8" role="button">
+        <img src="./assets/images/card2.jpg" class="w-full object-cover h-[300px]" alt="Card image 2">
+        <h2 class="text-xl font-bold mt-2">Green</h2>
+        <p>Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours</p>
+      </div>
+      <div class="flex flex-col items-center gap-8" role="button">
+        <img src="./assets/images/card3.jpg" class="w-full object-cover h-[300px]" alt="Card image 3">
+        <h2 class="text-xl font-bold mt-2">White</h2>
+        <p>White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat. 
+        </p>
+      </div>
+  </div>
+  </section>
 </body>
 
 </html>
