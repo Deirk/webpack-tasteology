@@ -6,6 +6,7 @@ import '../css/section-2.css';
 import { CmsService } from '@/infrastructure/services/CmsService';
 import { removeLoader, renderLoader } from '@/presentation/components/Loader';
 import { renderSecondSection } from '@/presentation/components/SecondSection';
+import { setupGlobalAnchorClickHandler } from '@/utils/anchorHandlers';
 
 const renderPage = async () => {
   const app = document.getElementById( 'app' );
@@ -30,6 +31,7 @@ const renderPage = async () => {
 };
 
 renderPage();
+setupGlobalAnchorClickHandler();
 
 // @ts-ignore
 if ( module.hot ) {

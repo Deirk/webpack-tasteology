@@ -4,19 +4,28 @@ const sleep = ( ms: number ) => new Promise( ( resolve ) => setTimeout( resolve,
 
 const fakeCmsData: CmsHomeDataModel = {
   firstSection: {
-    images: [
+    heroImages: [
       {
-        imageUrl: './assets/images/section-1/Left.jpg',
-        imageAlt: 'An image of a tamale being boiled',
+        image: {
+          imageUrl: './assets/images/section-1/Left.jpg',
+          imageAlt: 'An image of a tamale being boiled',
+        },
+        sectionLinked: '#',
       },
       {
-        imageUrl: './assets/images/section-1/Right_Top.jpg',
-        imageAlt: 'An image of a decoration on a table with names on top of it',
+        image: {
+          imageUrl: './assets/images/section-1/Right_Top.jpg',
+          imageAlt: 'An image of a decoration on a table with names on top of it',
+        },
+        sectionLinked: '#',
       },
       {
-        imageUrl: './assets/images/section-1/Right_Bottom.jpg',
-        imageAlt: 'A picture with different final results of boiled egg.',
-      }
+        image: {
+          imageUrl: './assets/images/section-1/Right_Bottom.jpg',
+          imageAlt: 'A picture with different final results of boiled egg.',
+        },
+        sectionLinked: '#',
+      },
     ],
     content: {
       headline: 'WHAT DOES COOKING MEAN?',
@@ -25,6 +34,7 @@ const fakeCmsData: CmsHomeDataModel = {
         head: 'THE PERFECT EGG',
         body: 'Keep water between 67 and 68°C for a flavourful, tender yolk',
       },
+      sectionLinked: '#',
     },
   },
   secondSection: {

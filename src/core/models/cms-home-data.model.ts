@@ -4,7 +4,7 @@ export interface CmsHomeDataModel {
 }
 
 export interface FirstSection {
-  images: Array<ImageData>;
+  heroImages: Array<HeroImage>;
   content: {
     headline: string;
     body: string;
@@ -12,6 +12,7 @@ export interface FirstSection {
       head: string;
       body: string;
     }
+    sectionLinked: string;
   }
 }
 
@@ -29,4 +30,9 @@ export interface Card {
 export interface ImageData {
   imageUrl: string;
   imageAlt: string;
+}
+
+export interface HeroImage {
+  image : ImageData;
+  sectionLinked: string;
 }
