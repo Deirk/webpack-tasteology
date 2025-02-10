@@ -48,7 +48,11 @@ export const renderFirstSection = ( { heroImages, content }: FirstSection ): HTM
 
   const contentTextElement = document.createElement( 'p' );
   contentTextElement.className = 'content';
-  contentTextElement.textContent = content.body;
+
+  let contentText = content.body;
+  // Truncate
+  if (content.body.length > 394) contentText = content.body.substring(0, 394) + '...';
+  contentTextElement.textContent = contentText;
 
   const callOutHeadeElement = document.createElement( 'h3' );
   callOutHeadeElement.className = 'callout-head';
