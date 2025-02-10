@@ -25,6 +25,9 @@ const renderPage = async () => {
     const secondSectionElement = renderSecondSection(secondSection);
     app.appendChild(secondSectionElement);
 
+    setupGlobalAnchorClickHandler();
+
+    document.dispatchEvent(new Event('app-rendered'));
   } catch ( error ) {
     console.error( error );
   }
@@ -32,7 +35,6 @@ const renderPage = async () => {
 };
 
 renderPage();
-setupGlobalAnchorClickHandler();
 
 // @ts-ignore
 if ( module.hot ) {
