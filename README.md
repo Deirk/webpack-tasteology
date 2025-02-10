@@ -10,7 +10,7 @@ Steps to build and start app
 Steps to start dev app
 
 1. Run command ``` npm install ```
-2. Run command ``` npm run dev ```
+2. Run command ``` npm start ```
 
 # Folder Structure:
 
