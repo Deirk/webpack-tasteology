@@ -17,27 +17,27 @@ Steps to start dev app
 based on DDD:
 
 webpack_tasteology/    
-├── src/  
-│   ├── core/
-│   │   ├── models/                      
-│   ├── infrastructure/  
-│   │   ├── services/ 
-│   ├── mock/         
-│   ├── presentation/   
-│   │   ├── assets/   
-│   │   │   ├── css/   
-│   │   │   ├── js/   
-│   │   │   └── images/   
-│   │   ├── pages 
-│   │   ├── components       
-│   ├── utils/  
-├── .gitignore  
-├── webpack.config.js   
-├── postcss.config.js   
-├── package.json    
-├── tailwind.config.js    
-├── tsconfig.json   
-└── README.md
+├── src/    
+│   ├── core/   
+│   │   ├── models/                          
+│   ├── infrastructure/      
+│   │   ├── services/     
+│   ├── mock/            
+│   ├── presentation/       
+│   │   ├── assets/       
+│   │   │   ├── css/      
+│   │   │   ├── js/      
+│   │   │   └── images/      
+│   │   ├── pages     
+│   │   ├── components          
+│   ├── utils/      
+├── .gitignore      
+├── webpack.config.js      
+├── postcss.config.js      
+├── package.json        
+├── tailwind.config.js       
+├── tsconfig.json      
+└── README.md   
 
 # Reasoning Behind My Decisions
 
