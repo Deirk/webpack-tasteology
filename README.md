@@ -6,6 +6,12 @@ Steps to build and start app
 1. Run command ``` npm install ```
 2. Run command ``` npm run build ```
 
+# Build (Static Site Generation)
+Steps to build and start app
+
+1. Run command ``` npm install ```
+2. Run command ``` npm run build:static ```
+
 # Dev
 Steps to start dev app
 
@@ -32,7 +38,8 @@ webpack_tasteology/
 │   │   ├── components          
 │   ├── utils/      
 ├── .gitignore      
-├── webpack.config.js      
+├── webpack.config.js
+├── webpack.static.config.js                 
 ├── postcss.config.js      
 ├── package.json        
 ├── tailwind.config.js       

@@ -2,7 +2,6 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.config');
 
-// Usaremos el fork actualizado para Webpack 5; por ejemplo, @dreysolano/prerender-spa-plugin
 const PrerenderSPAPlugin = require('@dreysolano/prerender-spa-plugin');
 const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
